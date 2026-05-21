@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:learndaily/funtions/apbar.dart';
 import 'package:learndaily/funtions/body.dart';
 
 void main() => runApp(Home());
@@ -10,21 +9,33 @@ class Home extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: apbar(
-          "Sherig – MoESD – Ministry of Education & Skills Development",
-          "Department of Education Programmes (DEP)",
-          "MoESD, Peling Lam, Kawajangsa, Thimphu, Bhutan Postal Code: 11001 .O. Box: 112",
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK4HYyiEsCh-NPOH7_bDIFVm0nyvmePLUGJA&s",
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK4HYyiEsCh-NPOH7_bDIFVm0nyvmePLUGJA&s",
-          DateTime(2026, 5, 20),
-          DateTime(2026, 5, 25),
+        // appBar: apbarnologo(
+        //   "Annual Conference 2026",
+        //   "Department of Education",
+        //   "",
+        //   DateTime(2026, 5, 20),
+        //   DateTime(2026, 5, 30),
+        // ),
+        body: SignageBody(
+          heading: "Annual Conference Annual Conference",
+          subHeading:
+              "Education for Future Annual Conference Annual Conference",
+          paragraph:
+              "This conference focuses on innovation and learning.Annual Conference Annual Conference",
+          footer: "Organized by Ministry of Education",
+          eventStartDate: DateTime(2026, 5, 21),
+          eventEndDate: DateTime(2026, 5, 29),
+          wifiName: "Yarkay IHCL Seleqtions",
+          wifiPassword: "seleqtions",
         ),
-        body: body(
-          "Sherig – MoESD – Ministry of Education & Skills Development",
-          "Department of Education Programmes (DEP)",
-          "MoESD, Peling Lam, Kawajangsa, Thimphu, Bhutan Postal Code: 11001 .O. Box: 112",
-          "MoESD, Peling Lam, Kawajangsa, Thimphu, Bhutan Postal Code: 11001 .O. Box: 112",
-        ),
+        // SignageBody(
+        //   "Annual Conference Annual Conference",
+        //   "Education for Future Annual Conference Annual Conference",
+        //   "This conference focuses on innovation and learning.Annual Conference Annual Conference",
+        //   "Organized by Ministry of Education",
+        //   DateTime(2026, 5, 20),
+        //   DateTime(2026, 5, 25),
+        // ),
       ),
     );
   }
