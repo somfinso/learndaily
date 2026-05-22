@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "355703054506",
+    "project_id": "learndaily-ceef9",
+    "storage_bucket": "learndaily-ceef9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:355703054506:android:622df40e720ebe71c0f0d3",
+        "android_client_info": {
+          "package_name": "com.example.learndaily"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQXtNfsa82phRjutr5tGKXX5KKHZU1gJM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

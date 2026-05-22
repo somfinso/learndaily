@@ -1,42 +1,28 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:learndaily/funtions/body.dart';
+import 'package:learndaily/funtions/template.dart';
 
-void main() => runApp(Home());
+import 'firebase_options.dart';
 
-class Home extends StatelessWidget {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        // appBar: apbarnologo(
-        //   "Annual Conference 2026",
-        //   "Department of Education",
-        //   "",
-        //   DateTime(2026, 5, 20),
-        //   DateTime(2026, 5, 30),
-        // ),
-        body: SignageBody(
-          heading: "Annual Conference Annual Conference",
-          subHeading:
-              "Education for Future Annual Conference Annual Conference",
-          paragraph:
-              "This conference focuses on innovation and learning.Annual Conference Annual Conference",
-          footer: "Organized by Ministry of Education",
-          eventStartDate: DateTime(2026, 5, 21),
-          eventEndDate: DateTime(2026, 5, 29),
-          wifiName: "Yarkay IHCL Seleqtions",
-          wifiPassword: "seleqtions",
-        ),
-        // SignageBody(
-        //   "Annual Conference Annual Conference",
-        //   "Education for Future Annual Conference Annual Conference",
-        //   "This conference focuses on innovation and learning.Annual Conference Annual Conference",
-        //   "Organized by Ministry of Education",
-        //   DateTime(2026, 5, 20),
-        //   DateTime(2026, 5, 25),
-        // ),
+      title: 'Learn Daily',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
+        useMaterial3: true,
       ),
+      home: TemplateGrid(),
     );
   }
 }
