@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:learndaily/funtions/onlyimage.dart';
 import 'package:learndaily/home.dart';
 import 'list_pages.dart';
 
@@ -27,7 +28,7 @@ class TemplateGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<Widget> pages = [SignagePage(), SignagePage()];
+    final List<Widget> pages = [SignagePage(), OnlyImagePage()];
     final CollectionReference<Map<String, dynamic>> templates =
         FirebaseFirestore.instance.collection('template');
 
